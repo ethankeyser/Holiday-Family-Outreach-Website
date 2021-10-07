@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Gowun Batang', serif;
+  background-color: #F7F6F2;
+  color: white;
+}
+
+h1 {
+  margin: 50px auto 0 auto;
+  color: #8C0000;
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  color: #FFBE0F;
+  line-height: 2;
+}
+
+a {
+  color: #334257;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #FFBE0F;
+  font-weight: bold;
+}
+
+hr {
+  border-style: dotted none none none;
+  border-width: 5px;
+  width: 7%;
+  border-color: #FFBE0F;
+  background-color: transparent;
+  margin: auto;
+  opacity: 1;
+}
+a:link {
+   text-decoration: none;
+ }
+
+a:visited {
+   text-decoration: none;
+ }
+
+
+a:hover {
+   text-decoration: none;
+ }
+
+
+a:active {
+   text-decoration: none;
+ }
+
+ ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #8C0000;
+   position: fixed;
+   width: 100%;
+   z-index: 9;
+ }
+
+ li {
+   float: left;
+  }
+
+
+  li a:hover {
+    background-color: #FFBE0F;
+    color: white;
+    border-radius: 15px 15px 0 0;
+  }
+
+  li a {
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+/********Class CSS Styles for All Pages*******/
+.nav {
+
+}
+
+
+.right-side-nav-text
+{
+  position: relative;
+}
+
+.right {
+  position: relative;
+  float: right;
+  margin-right: 25px;
+}
+
+
+.custom-hr {
+  margin-top: 70px;
+  width: 20%;
+  margin-bottom: 70px;
+}
+
+.active {
+  background-color: #BD2000;
+  border-radius: 15px 15px 0 0;
+}
+
+.main-logo {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/********Class CSS Styles for Home Page*******/
+
+.top-container-home {
+  width: 90%;
+  background-color: #BD2000;
+  padding-top: 100px;
+  margin: auto;
+
+}
+
+.hfo-img {
+  height: 15rem;
+  width: 45rem;
+  margin: auto;
+}
+
+.middle-container-home {
+  width: 90%;
+  background-color: #BD2000;
+  margin: auto;
+}
+
+.main-text-home {
+
+}
+
+.left-side-img-home {
+  
+}
