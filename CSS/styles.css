@@ -2,8 +2,9 @@ body {
   margin: 0;
   text-align: center;
   font-family: 'Gowun Batang', serif;
-  background-color: #F7F6F2;
+  background-color: #D9CAB3;
   color: white;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 h1 {
@@ -62,6 +63,7 @@ a:active {
    overflow: hidden;
    background-color: #8C0000;
    position: fixed;
+   border-radius: 0 0 20px 20px;
    width: 100%;
    z-index: 9;
  }
@@ -110,7 +112,7 @@ a:active {
 }
 
 .active {
-  background-color: #BD2000;
+  background-color: #FFBE0F;
   border-radius: 15px 15px 0 0;
 }
 
@@ -127,9 +129,8 @@ a:active {
 .top-container-home {
   width: 90%;
   background-color: #BD2000;
-  padding-top: 100px;
   margin: auto;
-
+  border-radius: 20px;
 }
 
 .hfo-img {
@@ -142,12 +143,50 @@ a:active {
   width: 90%;
   background-color: #BD2000;
   margin: auto;
+  border-radius: 20px;
 }
 
-.main-text-home {
-
+.main-text-home-left {
+  text-align: justify;
+  font-size: 16px;
 }
 
 .left-side-img-home {
-  
+  float: left;
+  height: 15rem;
+  width: 20rem;
+  margin: 5px;
+}
+
+.buffer-home {
+  height: 100px;
+}
+
+.heading-home-left {
+  text-align: left;
+  margin: 5px;
+}
+
+.heading-home-right {
+  text-align: right;
+  margin: 5px 5px 5px 5px;
+}
+
+.main-text-home-right {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.right-side-img-home {
+  float: right;
+  height: 15rem;
+  width: 20rem;
+  margin: 5px;
+}
+
+.bottom-container-home {
+  width: 90%;
+  background-color: #BD2000;
+  margin: auto;
+  border-radius: 20px;
 }
