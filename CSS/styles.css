@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
   text-align: center;
   font-family: 'Gowun Batang', serif;
   background-color: grey;
@@ -66,12 +67,13 @@ a:active {
    margin: 0;
    padding: 0;
    overflow: hidden;
-   background-color: grey;
+   background-color: #BD2000;
    position: fixed;
-   border-radius: 0 0 20px 20px;
    width: 100%;
    z-index: 9;
-   height: 150px;
+   text-shadow: 4px 4px 8px #000000;
+   box-shadow:  0 8px 8px 0 rgba(0, 0, 0, 0.3), 0 26px 20px 0 rgba(0, 0, 0, 0.3);
+   height: 130px;
  }
 
  li {
@@ -93,7 +95,24 @@ a:active {
 
 /********Class CSS Styles for All Pages*******/
 .nav {
-  height: 150px;
+  height: 130px;
+
+}
+
+.nav-logo {
+  float: left;
+  margin-left: 50px;
+  margin-top: 40px;
+  height: 60px;
+  width: 60px;
+}
+
+.nav-logo-2 {
+  float: right;
+  margin-right: 50px;
+  margin-top: 40px;
+  height: 60px;
+  width: 60px;
 }
 
 .underlineEffects a {
@@ -158,11 +177,12 @@ a:active {
 }
 
 .top-margin {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .main-title {
-  margin-top: 30px;
+  margin-top: 10px;
+  text-shadow: 4px 4px 8px #000000, 8px 8px 10px #000000;
 }
 
 .nav-hr {
@@ -189,6 +209,7 @@ a:active {
   height: 15rem;
   width: 45rem;
   margin: auto;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3), 0 20px 20px rgba(0, 0, 0, .3);
 }
 
 .information-row-home {
@@ -204,7 +225,8 @@ a:active {
   float: left;
   height: 15rem;
   width: 20rem;
-  margin: 5px;
+  margin: 15px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3), 0 20px 20px rgba(0, 0, 0, .3);
 }
 
 .buffer-home {
@@ -232,10 +254,11 @@ a:active {
   float: right;
   height: 15rem;
   width: 20rem;
-  margin: 5px;
+  margin: 15px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3), 0 20px 20px rgba(0, 0, 0, .3);
 }
 
-.bottom-container-home {
+.bottom-container {
   background-color: #BD2000;
   margin: auto;
   border-radius: 20px 20px 0 0;
@@ -313,21 +336,25 @@ a:active {
 
 
 .box {
-  width: 500px;
-  height: 300px;
+  height: 20rem;
+  width: 26.67rem;
   position: relative;
+  float: right;
+  margin: 15px;
 }
 
 .box .front,
 .box .back {
   position: absolute;
-  width: 500px;
-  height: 300px;
+  height: 20rem;
+  width: 26.67rem;
+  float: right;
+  margin: 15px;
   background: #FA1E0E;
   backface-visibility: hidden; cursor: pointer;
   border-radius: 20px;
-  box-shadow: 0 5px 30px rgba(230, 230, 0, 0.200),
-  0 -5px 30px rgba(230, 230, 0, 0.200);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.200),
+  0 -5px 30px rgba(0, 0, 0, 0.200);
   transition: transform .4s;
 }
 
@@ -348,7 +375,7 @@ a:active {
 .box .front img {
   width: 100%;
   height: 100%;
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px;
   position: absolute;
   align-content: center;
 }
@@ -358,6 +385,97 @@ a:active {
 }
 
 .box:hover .back {
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   transform: perspective(800px) rotateX(0);
+}
+
+
+.box2 {
+  height: 20rem;
+  width: 26.67rem;
+  position: relative;
+  float: left;
+  margin: 15px;
+}
+
+.box2 .front,
+.box2 .back {
+  position: absolute;
+  height: 20rem;
+  width: 26.67rem;
+  float: left;
+  margin: 0;
+  background: #FA1E0E;
+  backface-visibility: hidden; cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.200),
+  0 -5px 30px rgba(0, 0, 0, 0.200);
+  transition: transform .4s;
+}
+
+.box2 .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: perspective(800px) rotateX(-180deg);
+}
+
+.box2 .back p{
+  margin: 10px 20px;
+  text-align: center;
+  color: #FEF9EF;
+}
+
+.box2 .front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  position: absolute;
+  align-content: center;
+}
+
+.box2:hover .front {
+  transform: perspective(800px) rotateX(180deg);
+}
+
+.box2:hover .back {
+  border-radius: 20px;
+  transform: perspective(800px) rotateX(0);
+}
+/*******About Us Specifics***********/
+.middle-container-about-us {
+  width: 55%;
+  margin: auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.about-us-heading {
+  color: #FFBE0F;
+}
+
+.about-us-img {
+  height: 20rem;
+  width: 26.67rem;
+  float: right;
+
+}
+
+.about-us-img-2 {
+  height: 20rem;
+  width: 26.67rem;
+  float: left;
+}
+
+.main-text-about-us {
+  text-align: justify;
+  font-size: 16px;
+}
+
+
+/*******News Specifics********/
+
+.new-container {
+  
 }
