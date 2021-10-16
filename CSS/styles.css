@@ -477,5 +477,13 @@ a:active {
 /*******News Specifics********/
 
 .new-container {
-  
+
+}
+
+/***********Make a Donation Specifics************/
+.payment-container {
+  width: 60%;
+  background-color: #D5D5D5;
+  margin: auto;
+  align-content: center;
 }
