@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Style+Script&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div class="nav" id="navbarToggleExternalContent">
@@ -34,46 +35,52 @@
     <div class="buffer-home"></div>
 
     <div class="payment-container">
-      <form post="#">
+      <form name="paymentInfo" onsubmit="return checkFields()">
         <div class="row">
           <div class="col-md-6">
-            <h2>Billing Address</h2>
-            <label for="fname">Full Name</label>
+            <h2 class="payment-heading">Billing Address</h2>
+            <label for="fname">Full Name *</label>
             <input type="text" id="fname" name="fullname" placeholder="Ex: John M. Doe">
-            <label for="email">Email</label>
+            <label for="email">Email *</label>
             <input type="text" id="email" name="Email" placeholder="Ex: john@example.com">
-            <label for="address">Address</label>
+            <label for="address">Address *</label>
             <input type="text" id="address" name="Address" placeholder="Ex: 123 W. 12th Street">
-            <label for="city">City</label>
+            <label for="city">City *</label>
             <input type="text" id="city" name="City" placeholder="Ex: Boston">
             <div class="row">
               <div class="col-md-6">
-                <label for="state">State</label>
+                <label for="state">State *</label>
                 <input type="text" id="state" name="State" placeholder="Ex: Massachussets">
               </div>
               <div class="col-md-6">
-                <label for="zipcode">Zip Code</label>
+                <label for="zipcode">Zip Code *</label>
                 <input type="text" id="zipcode" name="Zip" placeholder="Ex: 10001">
               </div>
             </div>
           </div>
           <div class="col-md-6">
-            <h2>Card Information</h2>
-            <label for="cardName">Name as it Appears on Card</label>
+            <h2 class="payment-heading">Card Information</h2>
+            <label for="cardName">Name as it Appears on Card *</label>
             <input type="text" id="cardName" name="CardName" placeholder="Ex: JOHN M. DOE">
-            <label for="cardNum">Card Number</label>
+            <label for="cardNum">Card Number *</label>
             <input type="text" id="cardNum" name="CardNum" placeholder="Ex: 1111-2222-3333-4444">
-            <label for="expMonth">Name as it Appears on Card</label>
+            <label for="expMonth">Expiration Month *</label>
             <input type="text" id="expMonth" name="ExpMonth" placeholder="Ex: January">
-            <div class="">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="expYr">Expiration Year *</label>
+                <input type="text" id="expYr" name="ExpYr" placeholder="Ex: 2024">
+              </div>
+              <div class="col-md-6">
+                <label for="cvc">CVC *</label>
+                <input type="text" id="cvc" name="Cvc" placeholder="Ex: 123">
+              </div>
 
             </div>
 
           </div>
-
-
-
         </div>
+        <input type="submit" value="Submit Payment" class="submit-btn">
       </form>
     </div>
     <hr class="custom-hr">
@@ -86,6 +93,75 @@
       <p class="bottom-p">© 2021 Adams County Holiday Family Outreach.</p>
     </div>
 
+    <script type="text/javascript">
+      function checkFields() {
+        var alertMessage = "";
+        var save = true;
+        var firstName = document.forms["paymentInfo"]["fullname"].value;
+        if (firstname == null || firstname == "") {
+          alertMessage += "First Name may not be left blank. ";
+          save = false;
+        }
+        var email = document.forms["paymentInfo"]["Email"].value;
+        if (email == null || email == "") {
+          alertMessage += "Email may not be left blank. ";
+          save = false;
+        }
+        var address = document.forms["paymentInfo"]["Address"].value;
+        if (address == null || address == "") {
+          alertMessage += "Address may not be left blank. ";
+          save = false;
+        }
+        var city = document.forms["paymentInfo"]["City"].value;
+        if (city == null || city == "") {
+          alertMessage += "City may not be left blank. ";
+          save = false;
+        }
+        var state = document.forms["paymentInfo"]["State"].value;
+        if (state == null || state == "") {
+          alertMessage += "State may not be left blank. ";
+          save = false;
+        }
+        var zip = document.forms["paymentInfo"]["Zip"].value;
+        if (zip == null || zip == "") {
+          alertMessage += "Zip Code may not be left blank. ";
+          save = false;
+        }
+        var cardName = document.forms["paymentInfo"]["CardName"].value;
+        if (cardName == null || cardName == "") {
+          alertMessage += "Name on Card may not be left blank. ";
+          save = false;
+        }
+        var cardNum = document.forms["paymentInfo"]["CardNum"].value;
+        if (cardNum == null || cardNum == "") {
+          alertMessage += "Card Number may not be left blank. ";
+          save = false;
+        }
+        var expMonth = document.forms["paymentInfo"]["ExpMonth"].value;
+        if (expMonth == null || expMonth == "") {
+          alertMessage += "Expiration Month may not be left blank. ";
+          save = false;
+        }
+        var expYr = document.forms["paymentInfo"]["ExpYr"].value;
+        if (expYr == null || expYr == "") {
+          alertMessage += "Expiration Year may not be left blank. ";
+          save = false;
+        }
+        var cvc = document.forms["paymentInfo"]["Cvc"].value;
+        if (cvc == null || cvc == "") {
+          alertMessage += "CVC may not be left blank. ";
+          save = false;
+        }
+
+        if(save != true) {
+          alert(alertMessage);
+          return false;
+        }
+
+    }
+
+
+    </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
