@@ -44,7 +44,30 @@ hr {
   margin: auto;
   opacity: 1;
 }
-a:link {
+
+nav {
+  position: fixed;
+  background-color: #8C0000;
+}
+
+nav a  {
+  color: #FFBE0F;
+}
+
+.navbar a {
+  color: #FFBE0F;
+}
+
+.navbar a:hover {
+  color: #C8C6C6;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+/* a:link {
    text-decoration: none;
  }
 
@@ -89,7 +112,7 @@ a:active {
     color: #FEF9EF;
     text-align: center;
     text-decoration: none;
-  }
+  } */
 
 
 
@@ -476,9 +499,7 @@ a:active {
 
 /*******News Specifics********/
 
-.new-container {
 
-}
 
 /***********Make a Donation Specifics************/
 .payment-container {

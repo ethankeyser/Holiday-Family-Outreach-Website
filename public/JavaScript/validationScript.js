@@ -1,8 +1,11 @@
-function checkFields() {
+var button = document.getElementById("submitPayment")
+
+button.addEventListener("click", () => {
+  console.log("Click")
   var alertMessage = "";
   var save = true;
-  var firstName = document.forms["paymentInfo"]["fullname"].value;
-  if (firstname == null || firstname == "") {
+  let firstName = document.getElementById("fname").value;
+  if (firstName == null || firstName == "") {
     alertMessage += "First Name may not be left blank. ";
     save = false;
   }
@@ -61,5 +64,6 @@ function checkFields() {
     alert(alertMessage);
     return false;
   }
+})
 
-}
+
