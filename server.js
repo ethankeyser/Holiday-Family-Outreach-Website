@@ -35,7 +35,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
             }),
             success_url: `${process.env.SERVER_URL}/success.html`,
-            cancel_url: `${process.env.SERVER_URL}`
+            cancel_url: `${process.env.SERVER_URL}/make-a-donation.html`
         })
         res.json({url: session.url})
     } catch (e) {
