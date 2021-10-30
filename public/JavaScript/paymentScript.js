@@ -106,28 +106,36 @@ button5.addEventListener("click", () => {
 var button5 = document.getElementById("submitPaymentCustom")
 
 button5.addEventListener("click", () => {
+  var amount1 = document.getElementById("custom-textbox").value;
   var amount = document.getElementById("custom-textbox").value * 100;
-  console.log(amount)
-  fetch('/create-checkout-session-custom', {
-    method: 'POST', 
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      items: [
-        {id: 5, quantity: 1, priceincents: amount}
-      ],
-    }),
-  })
-  .then(res => {
-    if (res.ok) return res.json()
-    return res.json().then(json => Promise.reject(json))
-  })
-  .then(({ url }) => {
-    console.log(url)
-    window.location = url
-  })
-  .catch(e => {
-    console.error(e.error)
-  })
+  var regex  = /^\d+(?:\.\d{0,2})$/;
+  var numStr = amount1;
+  console.log(amount1)
+  if (regex.test(numStr) || amount % 1 == 0) {
+    console.log(amount)
+    fetch('/create-checkout-session-custom', {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        items: [
+          {id: 5, quantity: 1, priceincents: Math.trunc(amount)}
+        ],
+      }),
+    })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log(url)
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+  } else {
+    alert("Please enter a valid dollar amount to submit a custom donation")
+  }
 })
