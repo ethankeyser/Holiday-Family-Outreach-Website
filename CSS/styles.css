@@ -276,6 +276,7 @@ a:active {
   background-color: #BD2000;
   margin: auto;
   border-radius: 20px 20px 0 0;
+  width: 100%;
 }
 
 .footer-link {
@@ -605,12 +606,12 @@ input::-webkit-inner-spin-button {
 }
 
 .submit-btn-2 {
-  border-radius: 20px;
+  border-radius: 5px;
   color: #FFFFFF;
-  font-size: 22px;
+  font-size: 1rem;
   font-weight: 100;
-  padding: 5px;
-  width: 10px;
+  padding: 3px;
+  width: 6rem;
   background-color: #BD2000;
   box-shadow: 1px 1px 20px 0 #000000;
   text-shadow: 1px 1px 20px #000000;
@@ -623,8 +624,40 @@ input::-webkit-inner-spin-button {
 .submit-btn-2:hover {
   background: #808997;
   border: solid #000000 1px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
   text-decoration: none;
+}
+
+.bottom-container-cu {
+  background-color: #BD2000;
+  margin: auto;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.mailing-address-container {
+  height: 40rem;
+}
+
+.toy-address-container {
+  height: 40rem;
+}
+
+.phone-container {
+  height: 40rem;
+}
+
+.top-container-cu {
+  background-color: grey;
+  border-radius: 0 0 20px 20px;
+  margin: auto;
+  margin-top: 100px;
+  height: 100%;
+  width: 90%;
+}
+
+.cu-headings {
+  color: #BD2000;
+  text-shadow: 1px 1px 5px #000000;
 }

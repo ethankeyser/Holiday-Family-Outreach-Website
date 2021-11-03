@@ -12,24 +12,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Style+Script&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/098d125266.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="nav" id="navbarToggleExternalContent">
-      <ul>
-        <img src="HFOLogo.png" alt="HFO Logo" class="nav-logo"/>
-        <img src="HFOLogo.png" alt="HFO Logo" class="nav-logo-2"/>
-        <h1 class="main-title">Holiday Family Outreach</h1>
-        <div class="middle underlineEffects">
-          <li><a class="top-margin" href="index.html">Home</a></li>
-          <li><a class="active top-margin" href="about-us.html">About Us</a></li>
-          <li><a class="top-margin" href="news.html">News</a></li>
-          <li><a class="top-margin" href="make-a-donation.html">Make a Donation</a></li>
-          <li><a class="top-margin" href="#">Events</a></li>
-          <li><a class="top-margin" href="#">Contact Us</a></li>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+    
+    
+        <button id="navToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+    
+    
+        <div class="collapse navbar-collapse" id="navbarToggler2">
+          <ul class="navbar-nav underlineEffects">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-auto center">
+            <a href="index.html" id="HFOTitle" class="navbar-brand">Holiday Family Outreach</a>
+          </ul>
+          <ul class="navbar-nav ms-auto underlineEffects">
+            <li class="nav-item">
+              <a class="nav-link" href="make-a-donation.html">Make a Donation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
-        <hr class="nav-hr" />
-      </ul>
-    </div>
+        
+        </div>
+      </nav>
 
     <div class="buffer-home"></div>
 
@@ -60,7 +85,7 @@ Many church and youth groups, as well as area businesses, sponsor toy collection
   </div>
 </div>And, let’s not forget those elves in leather chaps, ABATE (Alliance of Bikers Aimed Toward Education) who for over 20 years have sponsored toy runs and fundraisers for the children of Adams County. Last year they donated $20,000 towards the purchase of new toys.  Ho! Ho! Ho!
 
-Toy Distribution is just around the corner and we need your help!  Don’t be a Scrooge! Help us by donating new toys or making a cash contribution.   Drop off toys by December 9 at the United Way of Adams County, 123 Buford Ave., Gettysburg or mail your cash contributions a.s.a.p. to Holiday Family Outreach, P.O. Box 4013, Gettysburg, PA 17325 or <a class="donate-link" href="#">Donate Here</a>.
+Toy Distribution is just around the corner and we need your help!  Don’t be a Scrooge! Help us by donating new toys or making a cash contribution.   Drop off toys by December 9 at the United Way of Adams County, 123 Buford Ave., Gettysburg or mail your cash contributions a.s.a.p. to Holiday Family Outreach, P.O. Box 4013, Gettysburg, PA 17325 or <a class="donate-link" href="make-a-donation.html">Donate Here</a>.
 
 HFO is a 501(c)3 nonprofit organization which means your contributions are tax-deductible.  For more information on the Holiday Family Outreach in Adams County, call United Way of Adams County Volunteer Center at 717-334-5809.
       </p>
@@ -77,7 +102,7 @@ HFO is a 501(c)3 nonprofit organization which means your contributions are tax-d
       <p class="bottom-p">© 2021 Adams County Holiday Family Outreach.</p>
     </div>
 
-
+    <script src="JavaScript/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
