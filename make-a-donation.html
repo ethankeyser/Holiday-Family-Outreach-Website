@@ -12,76 +12,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Style+Script&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/098d125266.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=AQojO873TxssFJ1ISdlt2DgTBwhmCiUgZuyXAP4Q_MeCPoWGKj2UOCe3kXdiKdCUjMzUH6ZzP2GDYoO_&currency=USD"></script>
+    <script src="JavaScript/paypalScript.js" defer></script>
   </head>
   <body>
-    <div class="nav" id="navbarToggleExternalContent">
-      <ul>
-        <img src="HFOLogo.png" alt="HFO Logo" class="nav-logo"/>
-        <img src="HFOLogo.png" alt="HFO Logo" class="nav-logo-2"/>
-        <h1 class="main-title">Holiday Family Outreach</h1>
-        <div class="middle underlineEffects">
-          <li><a class="top-margin" href="index.html">Home</a></li>
-          <li><a class="top-margin" href="about-us.html">About Us</a></li>
-          <li><a class="top-margin" href="news.html">News</a></li>
-          <li><a class="active top-margin" href="make-a-donation.html">Make a Donation</a></li>
-          <li><a class="top-margin" href="#">Events</a></li>
-          <li><a class="top-margin" href="#">Contact Us</a></li>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+    
+    
+        <button id="navToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler2" aria-controls="navbarToggler2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+    
+    
+        <div class="collapse navbar-collapse" id="navbarToggler2">
+          <ul class="navbar-nav underlineEffects">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-auto center">
+            <a href="index.html" id="HFOTitle" class="navbar-brand">Holiday Family Outreach</a>
+          </ul>
+          <ul class="navbar-nav ms-auto underlineEffects">
+            <li class="nav-item">
+              <a class="nav-link active" href="make-a-donation.html">Make a Donation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
         </div>
-        <hr class="nav-hr" />
-      </ul>
-    </div>
+        
+        </div>
+      </nav>
 
     <div class="buffer-home"></div>
 
-    <div class="payment-container">
-      <form name="paymentInfo" onsubmit="return checkFields()">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="payment-heading">Billing Address</h2>
-            <label for="fname">Full Name *</label>
-            <input type="text" id="fname" name="fullname" placeholder="Ex: John M. Doe">
-            <label for="email">Email *</label>
-            <input type="text" id="email" name="Email" placeholder="Ex: john@example.com">
-            <label for="address">Address *</label>
-            <input type="text" id="address" name="Address" placeholder="Ex: 123 W. 12th Street">
-            <label for="city">City *</label>
-            <input type="text" id="city" name="City" placeholder="Ex: Boston">
-            <div class="row">
-              <div class="col-md-6">
-                <label for="state">State *</label>
-                <input type="text" id="state" name="State" placeholder="Ex: Massachussets">
-              </div>
-              <div class="col-md-6">
-                <label for="zipcode">Zip Code *</label>
-                <input type="text" id="zipcode" name="Zip" placeholder="Ex: 10001">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="payment-heading">Card Information</h2>
-            <label for="cardName">Name as it Appears on Card *</label>
-            <input type="text" id="cardName" name="CardName" placeholder="Ex: JOHN M. DOE">
-            <label for="cardNum">Card Number *</label>
-            <input type="text" id="cardNum" name="CardNum" placeholder="Ex: 1111-2222-3333-4444">
-            <label for="expMonth">Expiration Month *</label>
-            <input type="text" id="expMonth" name="ExpMonth" placeholder="Ex: January">
-            <div class="row">
-              <div class="col-md-6">
-                <label for="expYr">Expiration Year *</label>
-                <input type="text" id="expYr" name="ExpYr" placeholder="Ex: 2024">
-              </div>
-              <div class="col-md-6">
-                <label for="cvc">CVC *</label>
-                <input type="text" id="cvc" name="Cvc" placeholder="Ex: 123">
-              </div>
-
-            </div>
-
-          </div>
+    <div class="row payment-container">
+      <div class="payment-heading">
+        <h1 style="text-shadow: 1px 1px 20px #000000;">Make a Donation!</h1>
+        <p style="font-size: 1.5rem; color: white;">Every donation counts! Donate using any of the preset buttons below or enter however much you would like! Thank you for any contributions in advance.</p>
+        <hr class="custom-hr">  
+      </div>
+      
+      <div class="col-md-3">
+        <button class="submit-btn" id="submitPaymentTen">$10</button>
+      </div>
+      <div class="col-md-3">
+        <button class="submit-btn" id="submitPaymentTwenty">$20</button>
+      </div>
+      <div class="col-md-3">
+        <button class="submit-btn" id="submitPaymentFifty">$50</button>
+      </div>
+      <div class="col-md-3">
+        <button class="submit-btn" id="submitPaymentHundred">$100</button>
+      </div>
+      <hr class="custom-hr">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 style="text-shadow: 1px 1px 20px #000000; font-size: 1.5rem;">Custom Donation Value</h3>
+          <p style="color: white;">If the preset donation amounts above do not satisfy your desired contribution amount, please enter a value into the box and click the cooresponding button that says "Submit"</p>
         </div>
-        <input type="submit" value="Submit Payment" class="submit-btn">
-      </form>
+        <div class="custom-payment-column col-md-6">
+          <p style="display: inline;">Enter Amount: </p>
+          <input id="custom-textbox" name="custom-textbox" type="number" class="custom-payment-box">
+          <button class="submit-btn-2" style="width: 50%;" id="submitPaymentCustom">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="middle-container">
+      <h2 class="or-heading">Or</h2>
+    </div>
+    <div class="paypal-container">
+      <h1 class="paypal-heading">Pay With Paypal</h1>
+      <hr class="custom-hr" />
+      <p class="amount-desc">Enter Amount: </p>
+      <input id="amount" name="amount-textbox" type="number" class="amount-textbox">
+    </div>
+    <div id="paypal">
+      
     </div>
     <hr class="custom-hr">
     <div class="row bottom-container">
@@ -92,77 +114,9 @@
       </div>
       <p class="bottom-p">© 2021 Adams County Holiday Family Outreach.</p>
     </div>
-
-    <script type="text/javascript">
-      function checkFields() {
-        var alertMessage = "";
-        var save = true;
-        var firstName = document.forms["paymentInfo"]["fullname"].value;
-        if (firstname == null || firstname == "") {
-          alertMessage += "First Name may not be left blank. ";
-          save = false;
-        }
-        var email = document.forms["paymentInfo"]["Email"].value;
-        if (email == null || email == "") {
-          alertMessage += "Email may not be left blank. ";
-          save = false;
-        }
-        var address = document.forms["paymentInfo"]["Address"].value;
-        if (address == null || address == "") {
-          alertMessage += "Address may not be left blank. ";
-          save = false;
-        }
-        var city = document.forms["paymentInfo"]["City"].value;
-        if (city == null || city == "") {
-          alertMessage += "City may not be left blank. ";
-          save = false;
-        }
-        var state = document.forms["paymentInfo"]["State"].value;
-        if (state == null || state == "") {
-          alertMessage += "State may not be left blank. ";
-          save = false;
-        }
-        var zip = document.forms["paymentInfo"]["Zip"].value;
-        if (zip == null || zip == "") {
-          alertMessage += "Zip Code may not be left blank. ";
-          save = false;
-        }
-        var cardName = document.forms["paymentInfo"]["CardName"].value;
-        if (cardName == null || cardName == "") {
-          alertMessage += "Name on Card may not be left blank. ";
-          save = false;
-        }
-        var cardNum = document.forms["paymentInfo"]["CardNum"].value;
-        if (cardNum == null || cardNum == "") {
-          alertMessage += "Card Number may not be left blank. ";
-          save = false;
-        }
-        var expMonth = document.forms["paymentInfo"]["ExpMonth"].value;
-        if (expMonth == null || expMonth == "") {
-          alertMessage += "Expiration Month may not be left blank. ";
-          save = false;
-        }
-        var expYr = document.forms["paymentInfo"]["ExpYr"].value;
-        if (expYr == null || expYr == "") {
-          alertMessage += "Expiration Year may not be left blank. ";
-          save = false;
-        }
-        var cvc = document.forms["paymentInfo"]["Cvc"].value;
-        if (cvc == null || cvc == "") {
-          alertMessage += "CVC may not be left blank. ";
-          save = false;
-        }
-
-        if(save != true) {
-          alert(alertMessage);
-          return false;
-        }
-
-    }
-
-
-    </script>
-
+    <script src="JavaScript/paymentScript.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/validationScript.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
