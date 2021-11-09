@@ -340,7 +340,7 @@ a:active {
   position: relative;
   padding-left: 5px;
   padding-right: 5px;
-  color: #FA1E0E;
+  color: #8C0000;
   text-decoration: none;
 }
 
@@ -482,6 +482,7 @@ a:active {
   text-align: left;
   line-height: 2;
   padding-bottom: 10rem;
+  padding-top: 30px;
 }
 
 .about-us-heading {
@@ -492,13 +493,16 @@ a:active {
   height: 20rem;
   width: 26.67rem;
   float: right;
-
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3);
+  margin: 15px;
 }
 
 .about-us-img-2 {
   height: 20rem;
   width: 26.67rem;
   float: left;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .3);
+  margin: 15px;
 }
 
 .main-text-about-us {
@@ -681,3 +685,35 @@ input::-webkit-inner-spin-button {
 .cu-headings {
   color: #8C0000;
 }
+
+
+.news-container {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.news-title {
+  text-align: left;
+  font-size: 2rem;
+  color: #8C0000;
+}
+
+.author-date {
+  font-size: .75rem;
+  color: #334257;
+  font-style: italic;
+  text-align: left;
+}
+
+.news-description {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.top-container-news {
+  width: 60%;
+  margin: auto;
+}
+
